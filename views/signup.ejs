@@ -16,6 +16,12 @@
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/boot.css" />
+    <style>
+         .navbar {
+        top: 0 !important;
+        background-color: rgba(2, 114, 139, 0.95) !important;
+      }
+    </style>
 </head>
 
 <body>
@@ -62,7 +68,7 @@
         </nav>
     </header>
 
-    <div class="bottom py-4 px-5 mt-5 rounded-3 container-fluid d-flex justify-content-center align-items-center">
+    <div class="bottom py-4 px-5 mt-5 rounded-3 container-fluid d-flex flex-column justify-content-center align-items-center">
         <%- include("./includes/flash.ejs") %>
         <fieldset>
             <legend class="text-center">

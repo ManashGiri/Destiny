@@ -43,8 +43,8 @@
 
                 <!-- Inclusions/Exclusions -->
                 <div class="row mb-5">
-                    <div class="col-md-6 mb-3 mb-md-0">
-                        <div class="card bg-light border-0 p-3 h-100">
+                    <div class="col-md-6 mb-md-0" style="width: max-content; height: max-content;">
+                        <div class="card bg-light border-0 p-3">
                             <h5 class="fw-bold text-success mb-3">Inclusions</h5>
                             <ul class="list-unstyled amenities-list">
                                 <li><span class="check-icon">✓</span> 4 Nights Accommodation</li>
@@ -55,7 +55,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-6" style="width: fit-content; height: fit-content;">
                         <div class="card bg-light border-0 p-3 h-100">
                             <h5 class="fw-bold text-danger mb-3">Exclusions</h5>
                             <ul class="list-unstyled amenities-list">
@@ -72,29 +72,30 @@
 
             <!-- Right Column: Booking Card -->
             <div class="col-lg-4">
-                <div class="card booking-card p-4">
-                    <div class="text-center mb-3">
+                <div class="card booking-card p-4" style="display: flex; flex-direction: column; gap: 20px;">
+                    <div class="text-center">
                         <p class="text-muted mb-1">Starting From</p>
                         <div class="price-tag"><%= package.price.toLocaleString("en-IN") %> <span class="fs-6 text-muted fw-normal">/ person</span></div>
                     </div>
                     
-                    <form>
-                        <div class="mb-3">
+                    <form style="display: flex; flex-direction: column; gap: 10px;">
+                        <div>
                             <label class="form-label text-muted">Travel Date</label>
                             <input type="date" class="form-control">
                         </div>
-                        <div class="mb-3">
+                        <div>
                             <label class="form-label text-muted">Number of Guests</label>
                             <input type="number" class="form-control" value="2" min="2">
                         </div>
-                        <br>
-                        <button type="submit" class="btn btn-book mb-3">Book Now</button>
+                        <div>
+                            <button type="submit" class="btn btn-book mb-3">Book Now</button>
+                        </div>
+                        
                     </form>
 
-                    <hr class="my-4" style="border-color: #444;"    >
                     <div class="text-center">
                         <p class="small text-muted">Need Help?</p>
-                        <h5 class="fw-bold">+91 98765 43210</h5>
+                        <h5 class="small text-muted">+91 98765 43210</h5>
                     </div>
                 </div>
             </div>
