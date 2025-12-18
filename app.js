@@ -174,8 +174,9 @@ function setupRoutes() {
         res.render("contact.ejs");
     });
 
-    app.get("/honeymoon", (req, res) => {
-        res.render("honeymoon.ejs");
+    app.get("/honeymoon", async (req, res) => {
+        const packages = await Upload.find({});
+        res.render("honeymoon.ejs", { packages });
     });
 
     app.get("/india_trips", (req, res) => {
@@ -216,14 +217,14 @@ function setupRoutes() {
                     return res.redirect("/login");
                 }
                 console.log("Login successful");
-                // req.flash("success", `Welcome to Destiny, ${username}!`);
+                req.flash("success", `Welcome to Destiny, ${username}!`);
                 console.log(`Welcome to Destiny, ${username}!`);
                 let redirectUrl = res.locals.redirectUrl || "/index";
                 res.redirect(redirectUrl);
             });
         } catch (e) {
             console.log("Registration error:", e);
-            // req.flash("error", e.message);
+            req.flash("error", e.message);
             console.log("Registration error:", e.message);
             res.redirect("/signup");
         }
@@ -244,7 +245,7 @@ function setupRoutes() {
     }, async (req, res) => {
         console.log("Login successful for user:", req.user);
         let { username, password } = req.body;
-        // req.flash("success", `Hi ${username}, now you're all set to explore!`);
+        req.flash("success", `Hi ${username}, now you're all set to explore!`);
         console.log(`Hi ${username}, now you're all set to explore!`);
         let redirectUrl = res.locals.redirectUrl || "/index";
         res.redirect(redirectUrl);

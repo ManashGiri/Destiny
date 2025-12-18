@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>India-Trips</title>
+    <link rel="icon" href="images/about/logo-Destiny-2025.webp" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/boot.css" />
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg container-fluid navbar-transparent position-fixed">
+            <div class="container-fluid d-flex justify-content-between">
+                <!-- Logo -->
+                <a class="navbar-brand fw-bold" href="/index"><img class="logo" src="images/logo.png" alt="" /></a>
+
+                <!-- Toggler for mobile -->
+                <button class="navbar-toggler hamburger" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"><i class="fa-solid fa-bars fs-2"></i></span>
+                </button>
+
+                <!-- Navigation Links -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active text-white" aria-current="page" href="/index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="/about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="/blog">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="/contact">Contact</a>
+                        </li>
+                        <% if(!curUser) { %>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="/signup">Sign Up</a>
+                        </li>
+                        <% } else { %>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="/logout">Logout</a>
+                        </li>
+                        <% } %>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    
+
+    <footer class="container-fluid">
+        <div class="upper_footer container-xl d-flex justify-content-center py-5">
+            <ul>
+                <li>
+                    <a href="/international_trips" class="fw-bold list-heading">International Trips</a>
+                </li>
+                <li><a href="/international_trips">Europe</a></li>
+                <li><a href="/international_trips">Georgia</a></li>
+                <li><a href="/international_trips">Bali</a></li>
+                <li><a href="/international_trips">Vietnam</a></li>
+                <li><a href="/international_trips">Spain</a></li>
+                <li><a href="/international_trips">Singapore</a></li>
+                <li><a href="/international_trips">Dubai</a></li>
+            </ul>
+            <ul>
+                <li><a href="/india_trips" class="fw-bold list-heading">India Trips</a></li>
+                <li><a href="/india_trips">Himachal</a></li>
+                <li><a href="/india_trips">Kashmir</a></li>
+                <li><a href="/india_trips">Kerala</a></li>
+                <li><a href="/india_trips">Ladakh</a></li>
+                <li><a href="/india_trips">Meghalaya</a></li>
+                <li><a href="/india_trips">Rajasthan</a></li>
+                <li><a href="/india_trips">Uttarakhand</a></li>
+            </ul>
+            <ul>
+                <li><a href="/honeymoon" class="fw-bold list-heading">Destiny Special</a></li>
+                <li><a href="/honeymoon">Community Trips</a></li>
+                <li><a href="/honeymoon">Honeymoon Trips</a></li>
+                <li><a href="/honeymoon">Corporate Trips</a></li>
+                <li><a href="/honeymoon">Weekend Gateways</a></li>
+            </ul>
+            <ul>
+                <li><a href="/index" class="fw-bold list-heading">Quick Links</a></li>
+                <li><a href="/index">Home</a></li>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/blog">Blogs</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+        </div>
+        <div class="accordion custom-accordion container-fluid acc" id="accordionExample">
+            <!-- International Trips -->
+            <div class="accordion-item w-100">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        International Trips
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <ul>
+                            <li><a href="/international_trips">Europe</a></li>
+                            <li><a href="/international_trips">Georgia</a></li>
+                            <li><a href="/international_trips">Bali</a></li>
+                            <li><a href="/international_trips">Vietnam</a></li>
+                            <li><a href="/international_trips">Spain</a></li>
+                            <li><a href="/international_trips">Singapore</a></li>
+                            <li><a href="/international_trips">Dubai</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- India Trips -->
+            <div class="accordion-item w-100">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        India Trips
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <ul>
+                            <li><a href="/india_trips">Himachal</a></li>
+                            <li><a href="/india_trips">Kashmir</a></li>
+                            <li><a href="/india_trips">Kerala</a></li>
+                            <li><a href="/india_trips">Ladakh</a></li>
+                            <li><a href="/india_trips">Meghalaya</a></li>
+                            <li><a href="/india_trips">Rajasthan</a></li>
+                            <li><a href="/india_trips">Uttarakhand</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Destiny Special -->
+            <div class="accordion-item w-100">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Destiny Special
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <ul>
+                            <li><a href="/honeymoon">Community Trips</a></li>
+                            <li><a href="/honeymoon">Honeymoon Trips</a></li>
+                            <li><a href="/honeymoon">Corporate Trips</a></li>
+                            <li><a href="/honeymoon">Weekend Gateways</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="accordion-item w-100">
+                <h2 class="accordion-header" id="headingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        Quick Links
+                    </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <ul>
+                            <li><a href="/index">Home</a></li>
+                            <li><a href="/about">About Us</a></li>
+                            <li><a href="/blog">Blogs</a></li>
+                            <li><a href="/contact">Contact Us</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div
+            class="lower-footer container-xl d-flex flex-column justify-content-center align-items-center pt-5 px-5 text-white text-center">
+            <p class="fs-2 fw-bold add-head">Destiny EXPERIENCES PVT LTD</p>
+            <p class="address">
+                3rd Floor, Building No-436, Phase IV, Udyog Vihar, Sector-18,
+                Gurugram, Haryana-122015
+            </p>
+            <p class="d-flex gap-5 justify-content-center align-items-center address">
+                <span>hello@Destiny.in</span> <span>+91-9090403075</span><span>www.Destiny.in</span>
+            </p>
+            <p class="py-2 px-5 social-icons rounded-pill d-flex justify-content-center align-items-center">
+                <span class="p-1 rounded-circle w-100"><a href=""><img src="images/social/instagram.svg"
+                            alt="https://www.instagram.com/wander.on/" /></a></span><span
+                    class="p-1 rounded-circle w-100"><a href=""><img src="images/social/facebook.svg"
+                            alt="https://www.facebook.com/wander.on?_rdr" /></a></span><span
+                    class="p-1 rounded-circle w-100"><a href=""><img src="images/social/youtube.svg"
+                            alt="https://www.youtube.com/c/Destiny?app=desktop" /></a></span><span
+                    class="p-1 rounded-circle w-100"><a href=""><img src="images/social/linkedin.svg"
+                            alt="https://www.linkedin.com/company/Destinytravelcommunity" /></a></span>
+            </p>
+            <img class="w-100 img-fluid" src="images/footer-desktop.webp" alt="" />
+        </div>
+        <div class="cpyright d-flex justify-content-center align-items-center py-4 text-white container-fluid">
+            <p>&#169; Destiny EXPERIENCES PVT LTD, All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/international.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

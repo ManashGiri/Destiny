@@ -188,7 +188,7 @@
     <div class="container d-flex justify-content-center align-items-center">
       <div class="contact-container">
         <h2>package</h2>
-        <p>Plan the perfect getaway. Define romantic packages</p>
+        <p>Plan the perfect gateway. Define romantic packages</p>
         <% if(curUser && curUser.role =="admin") { %>
           <form action="/package" method="POST" enctype="multipart/form-data">
           <div class="form-group">
@@ -200,8 +200,12 @@
             <label for="image">Select Image</label>
           </div>
           <div class="form-group">
-            <input type="text" id="location" name="uploads[location]" required placeholder=" " />
-            <label for="location">Enter Location</label>
+            <input type="text" id="place" name="uploads[place]" required placeholder=" " />
+            <label for="place">Enter City</label>
+          </div>
+          <div class="form-group">
+            <input type="text" id="country" name="uploads[country]" required placeholder=" " />
+            <label for="country">Enter Country</label>
           </div>
           <div class="form-group">
             <textarea id="description" name="uploads[description]" required placeholder=" "></textarea>
