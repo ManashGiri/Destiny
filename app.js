@@ -10,8 +10,12 @@ const flash = require("connect-flash");
 const cors = require("cors");
 const passport = require("passport");
 const passportLocal = require("passport-local");
-const { saveRedirectUrl } = require("./middleware");
+const { saveRedirectUrl, isLoggedIn } = require("./middleware");
 const User = require("./models/user");
+const Upload = require("./models/package.js");
+const multer = require('multer');
+const { storage } = require("./cloudConfig.js");
+const upload = multer({ storage });
 
 if(process.env.NODE_ENV != "production") {
     require('dotenv').config();
@@ -254,6 +258,18 @@ function setupRoutes() {
             req.flash("success", "Thank you for visiting us. Have a nice day!");
             res.redirect("/index");
         });
+    });
+
+    app.post('/package', isLoggedIn, upload.single('uploads[image]'), async (req, res) => {
+        console.log(req.body.uploads);
+        let uploads = req.body.uploads;
+        let url = req.file.path;
+        let filename = req.file.filename;
+        const newUpload = new Upload(uploads);
+        newUpload.image = { url, filename };
+        await newUpload.save();
+        req.flash("success", "New Upload Posted!");
+        res.redirect("/contact");
     });
 
     app.use((err, req, res, next) => {

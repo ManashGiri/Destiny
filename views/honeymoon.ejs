@@ -20,10 +20,280 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.theme.default.min.css" />
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.theme.default.min.css" /> -->
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> -->
+   <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
+
 
   <link rel="stylesheet" href="css/boot.css" />
+  <!-- <style>
+        /* Page Specific Styles */
+
+        .honeymoon-banner {
+            position: relative !important;
+            width: 100% !important;
+            height: 60vh !important;
+            background: url('images/romantic-explore/honeymoon-cover.webp') no-repeat center center/cover !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            color: white !important;
+            text-align: center !important;
+        }
+        
+        .honeymoon-banner::after {
+            content: '' !important;
+            position: absolute !important;
+            top: 0 !important; left: 0 !important; right: 0 !important; bottom: 0 !important;
+            background: rgba(0, 0, 0, 0.4) !important;
+        }
+
+        .banner-content {
+            position: relative !important;
+            z-index: 1 !important;
+        }
+
+        /* Swiper & Card Styling */
+        .swiper {
+            width: 100% !important;
+            padding-top: 20px !important;
+            padding-bottom: 50px !important;
+        }
+
+        .swiper-slide {
+            background-position: center !important;
+            background-size: cover !important;
+            width: 300px !important;
+            height: auto !important; /* Allow height to adjust to content or stretch */
+            display: flex !important;
+            justify-content: center !important;
+            align-items: stretch !important; /* Ensure all slides in a row stretch to match height */
+        }
+
+        .destination-card {
+            border: none !important;
+            border-radius: 15px !important;
+            overflow: hidden !important;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1) !important;
+            transition: transform 0.3s ease !important;
+            background: white !important;
+            width: 100% !important;
+            display: flex !important;
+            flex-direction: column !important;
+            height: 100% !important; /* Force card to fill the slide height */
+        }
+
+        .destination-card:hover {
+            transform: translateY(-5px) !important;
+        }
+
+        .card-img-wrapper {
+            position: relative !important;
+            height: 220px !important; /* Fixed height for images so they are uniform */
+            width: 100% !important;
+            overflow: hidden !important;
+            flex-shrink: 0 !important; /* Prevent image from shrinking */
+        }
+
+        .card-img-wrapper img {
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: cover !important;
+            transition: transform 0.5s ease !important;
+        }
+
+        .destination-card:hover .card-img-wrapper img {
+            transform: scale(1.1) !important;
+        }
+
+        .card-body {
+            padding: 1.5rem !important;
+            text-align: center !important;
+            display: flex !important;
+            flex-direction: column !important;
+            justify-content: space-between !important; /* Push content apart */
+            flex-grow: 1 !important; /* Allow body to fill remaining space */
+            background-color: #fff !important;
+        }
+
+        .card-title {
+            font-weight: 700 !important;
+            color: #333 !important;
+            margin-bottom: 0.5rem !important;
+        }
+
+        .card-text {
+            color: #666 !important;
+            margin-bottom: 1rem !important;
+        }
+
+        .btn-explore {
+            background-color: #ff4757 !important;
+            color: white !important;
+            border-radius: 25px !important;
+            padding: 8px 25px !important;
+            text-decoration: none !important;
+            transition: background 0.3s !important;
+            display: inline-block !important;
+            margin-top: auto !important; /* Push button to bottom */
+            align-self: center !important;
+        }
+
+        .btn-explore:hover {
+            background-color: #ff6b81 !important;
+            color: white !important;
+        }
+
+        /* Swiper Navigation Customization */
+        .swiper-button-next,
+        .swiper-button-prev {
+            color: #ff4757 !important; 
+            background: white !important;
+            width: 40px !important;
+            height: 40px !important;
+            border-radius: 50% !important;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2) !important;
+        }
+
+        .swiper-button-next:after,
+        .swiper-button-prev:after {
+            font-size: 18px !important;
+            font-weight: bold !important;
+        }
+
+        .swiper-pagination-bullet-active {
+            background-color: #ff4757 !important;
+        }
+    </style> -->
+    <style>
+        /* Page Specific Styles */
+        body {
+            font-family: 'Poppins', sans-serif !important;
+            background-color: #f9f9f9 !important;
+        }
+
+        .honeymoon-banner {
+            position: relative !important;
+            width: 100% !important;
+            height: 60vh !important;
+            background: url('images/romantic-explore/honeymoon-cover.webp') no-repeat center center/cover !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            color: white !important;
+            text-align: center !important;
+        }
+        
+        .honeymoon-banner::after {
+            content: '' !important;
+            position: absolute !important;
+            top: 0 !important; left: 0 !important; right: 0 !important; bottom: 0 !important;
+            background: rgba(0, 0, 0, 0.4) !important;
+        }
+
+        .banner-content {
+            position: relative !important;
+            z-index: 1 !important;
+        }
+
+        /* Splide Customization */
+        .splide__slide {
+            padding: 10px; /* Add spacing around cards */
+            height: auto; /* Allow slide to determine height */
+            display: flex; /* Ensure full height stretching */
+        }
+
+        .destination-card {
+            border: none !important;
+            border-radius: 15px !important;
+            overflow: hidden !important;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1) !important;
+            transition: transform 0.3s ease !important;
+            background: white !important;
+            width: 100% !important;
+            display: flex !important;
+            flex-direction: column !important;
+            height: 100% !important;
+        }
+
+        .destination-card:hover {
+            transform: translateY(-5px) !important;
+        }
+
+        .card-img-wrapper {
+            position: relative !important;
+            height: 220px !important;
+            width: 100% !important;
+            overflow: hidden !important;
+            flex-shrink: 0 !important;
+        }
+
+        .card-img-wrapper img {
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: cover !important;
+            transition: transform 0.5s ease !important;
+        }
+
+        .destination-card:hover .card-img-wrapper img {
+            transform: scale(1.1) !important;
+        }
+
+        .card-body {
+            padding: 1.5rem !important;
+            text-align: center !important;
+            display: flex !important;
+            flex-direction: column !important;
+            justify-content: space-between !important;
+            flex-grow: 1 !important;
+            background-color: #fff !important;
+        }
+
+        .card-title {
+            font-weight: 700 !important;
+            color: #333 !important;
+            margin-bottom: 0.5rem !important;
+        }
+
+        .btn-explore {
+            background-color: #ff4757 !important;
+            color: white !important;
+            border-radius: 25px !important;
+            padding: 8px 25px !important;
+            text-decoration: none !important;
+            transition: background 0.3s !important;
+            display: inline-block !important;
+            margin-top: auto !important;
+            align-self: center !important;
+            border: none;
+        }
+
+        .btn-explore:hover {
+            background-color: #ff6b81 !important;
+            color: white !important;
+        }
+
+        /* Customize Splide Arrows */
+        .splide__arrow {
+            background: white !important;
+            opacity: 1 !important;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2) !important;
+            width: 40px !important;
+            height: 40px !important;
+        }
+
+        .splide__arrow svg {
+            fill: #ff4757 !important;
+            height: 1.5em !important;
+            width: 1.5em !important;
+        }
+
+        .splide__pagination__page.is-active {
+            background: #ff4757 !important;
+            transform: scale(1.2);
+        }
+    </style>
 </head>
 
 <body style="background-color: white">
@@ -238,7 +508,280 @@
     <div class="d-flex align-items-center justify-content-center mb-4">
       <h3>All Honeymoon Packages</h3>
     </div>
-    <div class="owl-carousel owl-theme">
+
+     <section class="splide" aria-label="Honeymoon Destinations">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    
+                    <!-- Slide 1 -->
+                    <li class="splide__slide">
+                        <div class="destination-card">
+                            <div class="card-img-wrapper">
+                                <img src="images/romantic-explore/card_1.webp" alt="Bali Honeymoon">
+                                <span class="position-absolute top-0 start-0 badge bg-danger m-2">Customised</span>
+                            </div>
+                            <div class="card-body">
+                                <div>
+                                    <h5 class="card-title">Dreamy Honeymoon Tour Package to Bali</h5>
+                                    <div class="d-flex justify-content-center gap-3 mb-3 text-muted small">
+                                        <div class="d-flex align-items-center gap-1">
+                                            <img src="images/romantic-explore/icon/the-clock.svg" width="16" alt=""> 5 Days
+                                        </div>
+                                        <div class="d-flex align-items-center gap-1">
+                                            <img src="images/romantic-explore/icon/the-location.svg" width="16" alt=""> Bali, Indonesia
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="/honeymoon/show" class="btn-explore">View Details</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- Slide 2 -->
+                    <li class="splide__slide">
+                        <div class="destination-card">
+                            <div class="card-img-wrapper">
+                                <img src="images/romantic-explore/card_2.webp" alt="Vietnam Tour">
+                                <span class="position-absolute top-0 start-0 badge bg-danger m-2">Customised</span>
+                            </div>
+                            <div class="card-body">
+                                <div>
+                                    <h5 class="card-title">7 Days Exotic Vietnam Tour Package For Couple</h5>
+                                    <div class="d-flex justify-content-center gap-3 mb-3 text-muted small">
+                                        <div class="d-flex align-items-center gap-1">
+                                            <img src="images/romantic-explore/icon/the-clock.svg" width="16" alt=""> 6 Days
+                                        </div>
+                                        <div class="d-flex align-items-center gap-1">
+                                            <img src="images/romantic-explore/icon/the-location.svg" width="16" alt=""> Vietnam, Asia
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="/honeymoon/show" class="btn-explore">View Details</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- Slide 3 -->
+                    <li class="splide__slide">
+                        <div class="destination-card">
+                            <div class="card-img-wrapper">
+                                <img src="images/romantic-explore/card_3.webp" alt="Maldives Honeymoon">
+                                <span class="position-absolute top-0 start-0 badge bg-danger m-2">Customised</span>
+                            </div>
+                            <div class="card-body">
+                                <div>
+                                    <h5 class="card-title">Exotic Maldives Honeymoon at Olu Xperience Ailafushi</h5>
+                                    <div class="d-flex justify-content-center gap-3 mb-3 text-muted small">
+                                        <div class="d-flex align-items-center gap-1">
+                                            <img src="images/romantic-explore/icon/the-clock.svg" width="16" alt=""> 5 Days
+                                        </div>
+                                        <div class="d-flex align-items-center gap-1">
+                                            <img src="images/romantic-explore/icon/the-location.svg" width="16" alt=""> Maldives, South Asia
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="/honeymoon/show" class="btn-explore">View Details</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- Slide 4 -->
+                    <li class="splide__slide">
+                        <div class="destination-card">
+                            <div class="card-img-wrapper">
+                                <img src="images/romantic-explore/card_4.webp" alt="Singapore Honeymoon">
+                                <span class="position-absolute top-0 start-0 badge bg-danger m-2">Customised</span>
+                            </div>
+                            <div class="card-body">
+                                <div>
+                                    <h5 class="card-title">Celebrate Love - Singapore Honeymoon Tour Package</h5>
+                                    <div class="d-flex justify-content-center gap-3 mb-3 text-muted small">
+                                        <div class="d-flex align-items-center gap-1">
+                                            <img src="images/romantic-explore/icon/the-clock.svg" width="16" alt=""> 5 Days
+                                        </div>
+                                        <div class="d-flex align-items-center gap-1">
+                                            <img src="images/romantic-explore/icon/the-location.svg" width="16" alt=""> Singapore, Asia
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="/honeymoon/show" class="btn-explore">View Details</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- Slide 5 -->
+                    <li class="splide__slide">
+                        <div class="destination-card">
+                            <div class="card-img-wrapper">
+                                <img src="images/romantic-explore/card_5.webp" alt="Thailand Tour">
+                                <span class="position-absolute top-0 start-0 badge bg-danger m-2">Customised</span>
+                            </div>
+                            <div class="card-body">
+                                <div>
+                                    <h5 class="card-title">Exotic Thailand Tour Package - A Perfect Couple’s Retreat</h5>
+                                    <div class="d-flex justify-content-center gap-3 mb-3 text-muted small">
+                                        <div class="d-flex align-items-center gap-1">
+                                            <img src="images/romantic-explore/icon/the-clock.svg" width="16" alt=""> 5 Days
+                                        </div>
+                                        <div class="d-flex align-items-center gap-1">
+                                            <img src="images/romantic-explore/icon/the-location.svg" width="16" alt=""> Thailand, Asia
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="/honeymoon/show" class="btn-explore">View Details</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- Slide 6 -->
+                    <li class="splide__slide">
+                        <div class="destination-card">
+                            <div class="card-img-wrapper">
+                                <img src="images/romantic-explore/card_6.webp" alt="Kashmir Tour">
+                                <span class="position-absolute top-0 start-0 badge bg-danger m-2">Customised</span>
+                            </div>
+                            <div class="card-body">
+                                <div>
+                                    <h5 class="card-title">Romantic Escapade to the 3 Jewels of Kashmir.</h5>
+                                    <div class="d-flex justify-content-center gap-3 mb-3 text-muted small">
+                                        <div class="d-flex align-items-center gap-1">
+                                            <img src="images/romantic-explore/icon/the-clock.svg" width="16" alt=""> 5 Days
+                                        </div>
+                                        <div class="d-flex align-items-center gap-1">
+                                            <img src="images/romantic-explore/icon/the-location.svg" width="16" alt=""> Kashmir, India
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="/honeymoon/show" class="btn-explore">View Details</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- Slide 7 -->
+                    <li class="splide__slide">
+                        <div class="destination-card">
+                            <div class="card-img-wrapper">
+                                <img src="images/romantic-explore/card_7.webp" alt="Kerala Tour">
+                                <span class="position-absolute top-0 start-0 badge bg-danger m-2">Customised</span>
+                            </div>
+                            <div class="card-body">
+                                <div>
+                                    <h5 class="card-title">Honeymoon Tour to God's Own Country Kerala With Kanyakumari</h5>
+                                    <div class="d-flex justify-content-center gap-3 mb-3 text-muted small">
+                                        <div class="d-flex align-items-center gap-1">
+                                            <img src="images/romantic-explore/icon/the-clock.svg" width="16" alt=""> 5 Days
+                                        </div>
+                                        <div class="d-flex align-items-center gap-1">
+                                            <img src="images/romantic-explore/icon/the-location.svg" width="16" alt=""> Kerala, India
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="/honeymoon/show" class="btn-explore">View Details</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- Slide 8 -->
+                    <li class="splide__slide">
+                        <div class="destination-card">
+                            <div class="card-img-wrapper">
+                                <img src="images/romantic-explore/card_8.webp" alt="Andaman Tour">
+                                <span class="position-absolute top-0 start-0 badge bg-danger m-2">Customised</span>
+                            </div>
+                            <div class="card-body">
+                                <div>
+                                    <h5 class="card-title">6 Days Honeymoon Special Andaman Escapade</h5>
+                                    <div class="d-flex justify-content-center gap-3 mb-3 text-muted small">
+                                        <div class="d-flex align-items-center gap-1">
+                                            <img src="images/romantic-explore/icon/the-clock.svg" width="16" alt=""> 5 Days
+                                        </div>
+                                        <div class="d-flex align-items-center gap-1">
+                                            <img src="images/romantic-explore/icon/the-location.svg" width="16" alt=""> Andaman, India
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="/honeymoon/show" class="btn-explore">View Details</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- Slide 9 -->
+                    <li class="splide__slide">
+                        <div class="destination-card">
+                            <div class="card-img-wrapper">
+                                <img src="images/romantic-explore/card_1.webp" alt="Kashmir Tour 2">
+                                <span class="position-absolute top-0 start-0 badge bg-danger m-2">Customised</span>
+                            </div>
+                            <div class="card-body">
+                                <div>
+                                    <h5 class="card-title">Enchanting Kashmir - Couple Special Tour Package.</h5>
+                                    <div class="d-flex justify-content-center gap-3 mb-3 text-muted small">
+                                        <div class="d-flex align-items-center gap-1">
+                                            <img src="images/romantic-explore/icon/the-clock.svg" width="16" alt=""> 5 Days
+                                        </div>
+                                        <div class="d-flex align-items-center gap-1">
+                                            <img src="images/romantic-explore/icon/the-location.svg" width="16" alt=""> Kashmir, India
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="/honeymoon/show" class="btn-explore">View Details</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- Slide 10 -->
+                    <li class="splide__slide">
+                        <div class="destination-card">
+                            <div class="card-img-wrapper">
+                                <img src="images/romantic-explore/card_9.webp" alt="Kashmir Tour 3">
+                                <span class="position-absolute top-0 start-0 badge bg-danger m-2">Customised</span>
+                            </div>
+                            <div class="card-body">
+                                <div>
+                                    <h5 class="card-title">Romantic Escapade to the 3 Jewels of Kashmir.</h5>
+                                    <div class="d-flex justify-content-center gap-3 mb-3 text-muted small">
+                                        <div class="d-flex align-items-center gap-1">
+                                            <img src="images/romantic-explore/icon/the-clock.svg" width="16" alt=""> 5 Days
+                                        </div>
+                                        <div class="d-flex align-items-center gap-1">
+                                            <img src="images/romantic-explore/icon/the-location.svg" width="16" alt=""> Kashmir, India
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="/honeymoon/show" class="btn-explore">View Details</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- Slide 11 -->
+                    <li class="splide__slide">
+                        <div class="destination-card">
+                            <div class="card-img-wrapper">
+                                <img src="images/romantic-explore/card_10.webp" alt="Singapore Bintan Tour">
+                                <span class="position-absolute top-0 start-0 badge bg-danger m-2">Customised</span>
+                            </div>
+                            <div class="card-body">
+                                <div>
+                                    <h5 class="card-title">Singapore with Bintan Island - Honeymoon Special Tour Package</h5>
+                                    <div class="d-flex justify-content-center gap-3 mb-3 text-muted small">
+                                        <div class="d-flex align-items-center gap-1">
+                                            <img src="images/romantic-explore/icon/the-clock.svg" width="16" alt=""> 5 Days
+                                        </div>
+                                        <div class="d-flex align-items-center gap-1">
+                                            <img src="images/romantic-explore/icon/the-location.svg" width="16" alt=""> Singapore, Asia
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="/honeymoon/show" class="btn-explore">View Details</a>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </section>
+
+    <!-- <div class="owl-carousel owl-theme">
 
 
       <div class="item">
@@ -528,7 +1071,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
   </section>
   <section class="container-fluid pb-5 honey_form">
     <div class="position-relative">
@@ -552,10 +1095,7 @@
                 </p>
                 <p class="fs-6 m-0 fw-bold para-2">Get in Touch</p>
               </legend>
-              <!-- 
-                  The form below submits data to 'submit-form.php' using POST method.
-                  If you intend to handle submission via JavaScript, set action="#" and method="post", and prevent default in JS.
-                -->
+              
               <form action="submit-form.php" method="post" class="d-flex flex-column">
                 <div class="mb-3">
                   <label class="color mb-1" for="cta-name">Name:</label>
@@ -1110,8 +1650,10 @@
   </footer>
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-  <script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script> -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
+   <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+  <!-- <script>
     $(document).ready(function () {
       $(".owl-carousel").on(
         "changed.owl.carousel initialized.owl.carousel",
@@ -1126,16 +1668,82 @@
         items: 2,
         loop: true,
         margin: 60,
+        autoplay: true,
+        autoplayTimeout: 3000,
+        autoplayHoverPause: true,
         smartSpeed: 800,
         responsive: {
           0: { items: 1 },
           1000: { items: 3 },
           1440: { items: 3 },
         },
-      });
-    });
+      })
+    })
 
-  </script>
+  </script> -->
+  <!-- <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      loop: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 30,
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        },
+        1280: {
+          slidesPerView: 6,
+          spaceBetween: 30,
+        },
+      },
+    })
+  </script> -->
+  <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            new Splide('.splide', {
+                type   : 'loop',
+                perPage: 4,
+                gap    : '20px',
+                autoplay: true,
+                interval: 3000,
+                pauseOnHover: true,
+                breakpoints: {
+                    1200: {
+                        perPage: 3,
+                        gap: '20px',
+                    },
+                    992: {
+                        perPage: 2,
+                        gap: '15px',
+                    },
+                    576: {
+                        perPage: 1,
+                        gap: '10px',
+                    }
+                }
+            }).mount();
+        });
+    </script>
   <script src="js/international.js"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"

@@ -187,9 +187,44 @@
   <section class="container-fluid margin padding">
     <div class="container d-flex justify-content-center align-items-center">
       <div class="contact-container">
-        <h2>Contact Us</h2>
-        <p>Let’s plan your perfect getaway. Contact us today!</p>
-        <form>
+        <h2>package</h2>
+        <p>Plan the perfect getaway. Define romantic packages</p>
+        <% if(curUser && curUser.role =="admin") { %>
+          <form action="/package" method="POST" enctype="multipart/form-data">
+          <div class="form-group">
+            <input type="text" id="name" name="uploads[title]" required placeholder=" " />
+            <label for="name">Enter Title</label>
+          </div>
+          <div class="form-group">
+            <input type="file" id="image" name="uploads[image]" required placeholder=" " />
+            <label for="image">Select Image</label>
+          </div>
+          <div class="form-group">
+            <input type="text" id="location" name="uploads[location]" required placeholder=" " />
+            <label for="location">Enter Location</label>
+          </div>
+          <div class="form-group">
+            <textarea id="description" name="uploads[description]" required placeholder=" "></textarea>
+            <label for="description">Enter Description</label>
+          </div>
+          <div class="form-group">
+             <input type="number" id="price" name="uploads[price]" required placeholder=" " />
+            <label for="price">Enter Price</label>
+          </div>
+          <div class="form-group">
+             <input type="text" id="duration" name="uploads[duration]" required placeholder=" " />
+            <label for="duration">Enter Duration</label>
+          </div>
+          <div class="form-group">
+             <input type="text" id="hotel" name="uploads[hotel]" required placeholder=" " />
+            <label for="hotel">Enter Hotel</label>
+          </div>
+          <button type="submit">
+            Post <span class="arrow-icon">→</span>
+          </button>
+        </form>
+        <% } else { %>
+           <form>
           <div class="form-group">
             <input type="text" id="name" required placeholder=" " />
             <label for="name">Your Name</label>
@@ -206,6 +241,8 @@
             SUBMIT <span class="arrow-icon">→</span>
           </button>
         </form>
+        <% } %> 
+       
       </div>
     </div>
   </section>
