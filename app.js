@@ -3,21 +3,21 @@ const app = express();
 const mongoose = require("mongoose");
 const path = require("path");
 const methodOverride = require("method-override");
-// const ejsMate = require("ejs-mate");
+const ejsMate = require("ejs-mate");
 const session = require("express-session");
 const MongoStore = require("connect-mongo");
 const flash = require("connect-flash");
 const cors = require("cors");
 const passport = require("passport");
 const passportLocal = require("passport-local");
-const { saveRedirectUrl, isLoggedIn } = require("./middleware");
+const { saveRedirectUrl, isLoggedIn, isAdmin } = require("./middleware");
 const User = require("./models/user");
 const Upload = require("./models/package.js");
 const multer = require('multer');
 const { storage } = require("./cloudConfig.js");
 const upload = multer({ storage });
 
-if(process.env.NODE_ENV != "production") {
+if (process.env.NODE_ENV != "production") {
     require('dotenv').config();
 }
 
@@ -28,15 +28,17 @@ const MONGO_URL = process.env.DB_URL || "mongodb://localhost:27017/destiny";
 main()
     .then(() => {
         console.log("Connected to DB successfully");
-        // Initialize Passport after DB connection
+        // Setup basic Express middleware first
+        setupExpressBasics();
+        // Then initialize Passport
         initializePassport();
-        // Setup routes after everything
+        // Finally setup routes
         setupRoutes();
     })
     .catch((err) => {
         console.log("Database connection error:", err);
         console.log("Continuing without database - some features may not work");
-        // Still initialize passport even if DB fails, but log the error
+        setupExpressBasics();
         initializePassport();
         setupRoutes();
     });
@@ -48,6 +50,17 @@ async function main() {
         console.log("MongoDB connection failed:", error);
         throw error;
     }
+}
+
+function setupExpressBasics() {
+    app.set("view engine", "ejs");
+    app.set("views", path.join(__dirname, "views"));
+    app.use(express.urlencoded({ extended: true }));
+    app.use(methodOverride("_method"));
+    app.engine("ejs", ejsMate);
+    app.use(express.static(path.join(__dirname, "assets")));
+    app.use(express.static(path.join(__dirname, "public")));
+    console.log("Express basics configured");
 }
 
 function initializePassport() {
@@ -91,14 +104,7 @@ function setupRoutes() {
     console.log("Routes setup complete");
 }
 
-app.set("view engine", "ejs");
-app.set("views", path.join(__dirname, "views"));
-app.use(express.urlencoded({ extended: true }));
-app.use(methodOverride("_method"));
-// app.engine("ejs", ejsMate);
-app.use(express.static(path.join(__dirname, "/assets")));
-app.use(express.static(path.join(__dirname, "/public")));
-
+// Express basics are now configured in setupExpressBasics()
 const store = MongoStore.create({
     mongoUrl: MONGO_URL,
     crypto: {
@@ -140,6 +146,11 @@ function setupRoutes() {
         res.locals.error = req.flash("error");
         res.locals.curUser = req.user;
         next();
+    });
+
+    app.get("/show/:id", isLoggedIn, async (req, res) => {
+        const package = await Upload.findById(req.params.id);
+        res.render('show.ejs', { package });
     });
 
     app.get("/", (req, res) => {
@@ -198,7 +209,7 @@ function setupRoutes() {
     app.post('/signup', saveRedirectUrl, async (req, res) => {
         try {
             console.log("Signup attempt:", req.body);
-            let { email, username, password} = req.body;
+            let { email, username, password } = req.body;
             let role = 'user';
             let newUser = new User({ email, username, role });
             let registeredUser = await User.register(newUser, password);
@@ -261,7 +272,7 @@ function setupRoutes() {
         });
     });
 
-    app.post('/package', isLoggedIn, upload.single('uploads[image]'), async (req, res) => {
+    app.post('/package', isLoggedIn, isAdmin, upload.single('uploads[image]'), async (req, res) => {
         console.log(req.body.uploads);
         let uploads = req.body.uploads;
         let url = req.file.path;
