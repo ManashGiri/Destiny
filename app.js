@@ -247,7 +247,7 @@ function setupRoutes() {
 
         const authMiddleware = passport.authenticate("local", {
             failureRedirect: "/login",
-            // failureFlash: true
+            failureFlash: true
         });
 
         console.log("Auth middleware:", typeof authMiddleware);
